@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('click', (event) => {
-        if (event.target == loginForm) {
+        if (event.target === loginForm) {
             loginForm.style.display = 'none';
         }
     });
