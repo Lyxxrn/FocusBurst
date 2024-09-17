@@ -1,0 +1,97 @@
+/* Modal (Login Form) Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dezentere Hintergrundfarbe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px; /* Weiche Ecken für modernes Aussehen */
+    width: 100%;
+    max-width: 400px; /* Begrenzte Breite für bessere Lesbarkeit */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Moderner Schatten */
+    position: relative;
+    text-align: center; /* Inhalte zentrieren */
+    transition: all 0.3s ease-in-out; /* Weiche Übergänge */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5252; /* Rote Farbe beim Hover */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Abstand zwischen den Elementen */
+}
+
+label {
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px; /* Abgerundete Ecken */
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Hauptfarbe für den Fokus */
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    border-radius: 25px; /* Runde Buttons */
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2a8bcc;
+}
+
+button:active {
+    background-color: #1d6a99; /* Dunklere Farbe bei Aktivierung */
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

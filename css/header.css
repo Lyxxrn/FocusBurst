@@ -1,0 +1,245 @@
+/* Header-Stile */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Erhöhe das Padding, falls nötig */
+    background-color: #38B6FF; /* Primärfarbe für den Header */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Inkludiere Padding und Border in der Gesamtbreite/Höhe */
+    overflow: hidden; /* Verhindert, dass Inhalte abgeschnitten werden */
+}
+
+/* Logo und Profilfoto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Platz für das Profilbild */
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile-photo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+/* Suchleiste */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px; /* Platz für die Navigation */
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px; /* Verhindert, dass die Suchleiste zu breit wird */
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links ul li a:hover {
+    background-color: #555;
+}
+
+/* Burger-Menü */
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Dropdown-Menü für mobile Ansicht */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Höhe des Headers */
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+}
+
+
+/* Logo and Profile Photo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile-photo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Search bar */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Navigation */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links ul li a:hover {
+    background-color: #555;
+}
+
+/* Burger-Menü-Stile */
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Dropdown-Menü */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Dropdown-Menü aktiv bei Hover */
+.burger-menu:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: flex;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li a {
+    padding: 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu ul li a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+
+}

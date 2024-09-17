@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home </a> </li>
-            <li><a href="dashboard.html">Dashboard </a> </li>
-            <li><a href="stats.html">Statistiken </a> </li>
-            <li><a href="profile.html">Profil </a> </li>
-        </ul>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Burst</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
 <body>
 
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <nav class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stats.html">Statistiken</a></li>
+            <li><a href="profile.html">Profil</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<!-- Burger Menu Dropdown -->
+
+
+<div class="burger-menu" onclick="">☰</div>
+<div class="dropdown-menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Statistiken</a></li>
+        <li><a href="#">Profil</a></li>
+    </ul>
+</div>
+<script src="js/burgerMenu.js"></script>
 </body>
 </html>
