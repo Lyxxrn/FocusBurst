@@ -1,0 +1,77 @@
+/* Kontaktseite */
+main {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.contact-info, .contact-form {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p, .contact-info h3, .contact-form label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info p a:hover {
+    text-decoration: underline;
+}
+
+/* Formularstile */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2a8bcc;
+}
+
+.contact-form button:active {
+    background-color: #1d6a99;
+}

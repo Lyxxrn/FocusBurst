@@ -1,19 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginButton = document.getElementById('loginButton');
-    const loginForm = document.getElementById('loginForm');
-    const closeButton = document.querySelector('.close');
+// Hol dir die Button- und Modal-Elemente
+const openModalButton = document.getElementById('openModalButton');
+const loginModal = document.getElementById('loginModal');
+const closeModal = document.getElementById('closeModal');
 
-    loginButton.addEventListener('click', () => {
-        loginForm.style.display = 'block';
-    });
+// EventListener für das Öffnen des Modals
+openModalButton.addEventListener('click', () => {
+    loginModal.style.display = 'flex'; // Zeigt das Modal mittig an
+});
 
-    closeButton.addEventListener('click', () => {
-        loginForm.style.display = 'none';
-    });
+// EventListener für das Schließen des Modals
+closeModal.addEventListener('click', () => {
+    loginModal.style.display = 'none'; // Versteckt das Modal wieder
+});
 
-    window.addEventListener('click', (event) => {
-        if (event.target === loginForm) {
-            loginForm.style.display = 'none';
-        }
-    });
+// Optional: Schließen des Modals, wenn außerhalb geklickt wird
+window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+        loginModal.style.display = 'none'; // Versteckt das Modal
+    }
 });

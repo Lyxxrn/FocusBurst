@@ -1,0 +1,113 @@
+/* Profilseite */
+main {
+    main {
+        padding: 80px 20px;
+        background-color: #f9f9f9;
+        color: #333;
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column; /* Stellt sicher, dass die Kinder untereinander angeordnet sind */
+        align-items: center; /* Zentriert den Inhalt */
+    }
+
+}
+
+.profile-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.profile-sidebar {
+    flex: 0 0 250px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.user-profile {
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-sidebar h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.profile-sidebar p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-info, .change-password, .settings {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-info h2, .change-password h2, .settings h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.profile-info .form-group, .change-password .form-group, .settings .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-info label, .change-password label, .settings label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.profile-info input, .change-password input, .settings input, .profile-info select, .settings select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.profile-info button, .change-password button, .settings button {
+    padding: 12px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-info button:hover, .change-password button:hover, .settings button:hover {
+    background-color: #2a8bcc;
+}
+
+.profile-info button:active, .change-password button:active, .settings button:active {
+    background-color: #1d6a99;
+}
+
+#timezone-selector {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}

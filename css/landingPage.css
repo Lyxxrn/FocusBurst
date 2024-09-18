@@ -1,0 +1,250 @@
+/* Hauptbereich der Landing Page */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hauptüberschrift */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700; /* Stärkeres Gewicht für bessere Lesbarkeit */
+    line-height: 1.2; /* Engere Zeilenhöhe */
+}
+
+/* Paragraphen */
+p {
+    font-size: 1.125rem; /* Etwas größere Schrift für Lesbarkeit */
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333; /* Dunklere Textfarbe */
+}
+
+/* Call to Action Button */
+#loginButton {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefenwirkung */
+}
+
+#loginButton:hover {
+    background-color: #2a8bcc;
+    transform: translateY(-2px); /* Anheben statt Skalieren für subtileren Effekt */
+}
+
+#loginButton:active {
+    background-color: #1d6a99;
+    transform: translateY(0); /* Button kehrt in Ausgangslage zurück */
+}
+
+/* Modal (Login Form) Styles */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Exakte Zentrierung */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Flexbox für bessere Ausrichtung */
+    justify-content: center;
+    align-items: center; /* Zentrale vertikale und horizontale Ausrichtung */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5252;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2a8bcc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #1d6a99;
+    transform: translateY(0);
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+@media (min-width: 601px) {
+    .modal-content {
+        width: 100%;
+        max-width: 400px;
+        padding: 40px 30px;
+    }
+}
+/* Hero-Bereich Styling */
+.hero {
+    height: 100vh; /* Volle Höhe des Bildschirms */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Kühles Grauweiß */
+    color: #333; /* Dunkelgrauer Text */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Verhindert, dass Animationen den Bereich verlassen */
+}
+
+.hero-content {
+    opacity: 0; /* Start mit unsichtbarem Inhalt */
+    transform: translateY(50px); /* Inhalt startet leicht nach unten versetzt */
+    animation: fadeInUp 1s ease-out forwards; /* Animation beim Laden */
+}
+
+/* Logo im Hero-Bereich */
+.hero-logo {
+    max-width: 250px; /* Beschränkt die maximale Breite des Logos */
+    width: 100%;
+    margin-bottom: 20px;
+    animation: logoZoom 1.5s ease-out forwards; /* Zoom-Effekt für das Logo */
+}
+
+/* Text im Hero-Bereich */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2e2e2e; /* Dunkler Grauton */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555; /* Mittelgrauer Text */
+}
+
+/* CTA-Button Styling */
+.cta-button {
+    padding: 15px 30px;
+    background-color: #2e86de; /* Modernes Blau als Akzentfarbe */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2169a5; /* Leicht dunklerer Blauton beim Hover */
+    transform: translateY(-5px); /* Leichtes Anheben beim Hover */
+}
+
+/* Animationen */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}

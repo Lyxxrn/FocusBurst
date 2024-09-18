@@ -1,11 +1,10 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    margin-top: 60px; /* Add top margin equal to the header's height */
+    margin: 60px 0 0; /* Add top margin equal to the header's height */
 }
 main {
     min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
@@ -14,5 +13,5 @@ main {
 
 /* Primary color */
 :root {
-    --primary-color: #38B6FF;
+    --primary-color: #38a5ff;
 }

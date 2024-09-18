@@ -3,52 +3,60 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Erhöhe das Padding, falls nötig */
-    background-color: #38B6FF; /* Primärfarbe für den Header */
+    padding: 15px 30px; /* Mehr Padding für besseren Abstand */
+    background-color: #38B6FF; /* Primärfarbe */
     color: white;
-    position: fixed;
+    position: sticky; /* Verbesserte Sticky-Navigation */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box; /* Inkludiere Padding und Border in der Gesamtbreite/Höhe */
-    overflow: hidden; /* Verhindert, dass Inhalte abgeschnitten werden */
+    box-sizing: border-box; /* Inkludiere Padding und Border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiler Schatten für Tiefe */
+    transition: background-color 0.3s ease; /* Weicher Übergang beim Scrollen */
 }
 
 /* Logo und Profilfoto */
 .logo-container {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Platz für das Profilbild */
+    height: 60px;
+    flex: 0 1 auto;
 }
 
 .logo {
-    height: 40px;
-    margin-right: 10px;
+    height: 100%; /* Passt die Höhe des Logos an die Höhe des Containers an */
+    width: auto;
+    transition: transform 0.3s ease; /* Leichte Animation beim Hover */
 }
 
-.profile-photo {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-    object-fit: cover;
+.logo:hover {
+    transform: scale(1.05); /* Leichtes Vergrößern bei Hover */
 }
 
 /* Suchleiste */
 .search-container {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
-    margin: 0 20px; /* Platz für die Navigation */
+    justify-content: left;
+    margin: 0 20px;
+    max-width: 400px; /* Begrenzte Breite für bessere Lesbarkeit */
 }
 
 .search-bar {
-    width: 100%;
-    max-width: 600px; /* Verhindert, dass die Suchleiste zu breit wird */
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 25px; /* Abgerundete Ecken für modernen Look */
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Innen-Schatten für Tiefe */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #38B6FF;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5); /* Fokus-Highlight */
+    outline: none;
 }
 
 /* Navigation */
@@ -63,101 +71,41 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
+    gap: 15px; /* Abstand zwischen den Links */
+}
+
+.nav-links ul li {
+    position: relative;
 }
 
 .nav-links ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    transition: background 0.3s;
-}
-
-.nav-links ul li a:hover {
-    background-color: #555;
-}
-
-
-
-
-/* Logo and Profile Photo */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.profile-photo {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-/* Search bar */
-.search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.search-bar {
-    width: 800px;
-    padding: 8px;
+    padding: 10px 15px;
     border-radius: 5px;
-    border: none;
-}
-
-/* Navigation */
-.nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    transition: background 0.3s;
+    transition: background-color 0.3s, color 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links ul li a:hover {
-    background-color: #555;
+    background-color: #2a8bcc;
+    color: #fff; /* Leicht dunklerer Hintergrund beim Hover */
 }
 
-
-
-/* Responsive Design */
+/* Responsives Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    header {
+        flex-direction: column; /* Staple Inhalte für kleine Bildschirme */
+        padding: 10px 20px;
     }
 
-    .burger-menu {
-        display: block;
+    .search-container {
+        margin: 10px 0;
+        max-width: 100%; /* Suchleiste über volle Breite */
     }
-}
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .search-bar {
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 992px) {
-    .search-bar {
-        max-width: 300px;
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px; /* Vertikales Layout für die Links */
     }
 }
-
-@media (max-width: 768px) {
-    .search-bar {
-        max-width: 300px;
-    }
-}
-

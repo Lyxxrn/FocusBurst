@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,33 +17,40 @@
     <!-- Komponenten-Styles (Buttons, Formulare, etc.) -->
     <link rel="stylesheet" href="css/components.css">
 
-    <!-- Login-Styles -->
-    <link rel="stylesheet" href="css/login.css">
-
 </head>
 <body>
+<section class="hero">
+    <div class="hero-content">
+        <img src="images/Logo.png" alt="FokusBurst Logo" class="hero-logo">
+        <h1>Learn Smart, Not Hard</h1>
+        <p>Fokussiertes Lernen leicht gemacht.</p>
+        <button class="cta-button" id="scrollToMain">Jetzt starten</button>
+    </div>
+</section>
+
 
 <!-- Hier wird der Header geladen -->
 <div id="header"></div>
 
 <!-- Hauptinhalt der Seite -->
 <main>
-    <h1>Home</h1>
+    <h1>Willkommen bei Focus Burst</h1>
     <p>Hier steht der spezifische Inhalt der Seite.</p>
 
-    <!-- Call to Action Button -->
-    <button id="loginButton">Login</button>
+    <!-- Button zum Öffnen des Modals -->
+    <button id="openModalButton">Anmelden</button>
 
-    <!-- Login Form -->
-    <div id="loginForm" class="modal">
+    <!-- Modal -->
+    <div class="modal" id="loginModal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Login</h2>
             <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Passwort:</label>
                 <input type="password" id="password" name="password" required>
-                <button type="submit">Login</button>
+                <button type="submit">Anmelden</button>
             </form>
         </div>
     </div>
@@ -53,26 +60,14 @@
         <h2>Was ist die Pomodoro Methode?</h2>
         <p>Die Pomodoro Methode ist eine Zeitmanagement-Technik, die von Francesco Cirillo entwickelt wurde. Sie nutzt einen Timer, um Arbeit in Intervallen von 25 Minuten, gefolgt von kurzen Pausen, zu unterteilen.</p>
         <h2>Warum diese Website verwenden?</h2>
-        <p>Unsere Website bietet eine benutzerfreundliche Oberfläche,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur detaillierte Statistiken und ein integriertes Task-Management-System, um Ihre Produktivität zu maximieren.</p>
+        <p>Unsere Website bietet eine benutzerfreundliche Oberfläche, detaillierte Statistiken und ein integriertes Task-Management-System, um Ihre Produktivität zu maximieren.</p>
     </section>
 </main>
 
 <!-- Hier wird der Footer geladen -->
 <div id="footer"></div>
 
-
-
-<!-- JavaScript-Datei einbinden -->
+<!-- JavaScript-Dateien einbinden -->
 <script src="js/loadLayout.js"></script>
 <script src="js/landingPage.js"></script>
 <script src="js/login.js"></script>
