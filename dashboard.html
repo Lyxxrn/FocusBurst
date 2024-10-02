@@ -13,29 +13,49 @@
 
   <!-- Spezifische Styles für die Dashboard Page -->
   <link rel="stylesheet" href="css/dashboard.css">
-
+<link rel="stylesheet" href="css/taskManager.css">
   <!-- Komponenten-Styles (Buttons, Formulare, etc.) -->
 
 
 </head>
 <body>
-
-<!-- Hier wird der Header geladen -->
 <div id="header"></div>
 
-<!-- Hauptinhalt der Seite -->
-<main>
-  <h1>Dashboard</h1>
-  <p>Hier steht der spezifische Inhalt der Seite.</p>
-</main>
-<h1>jsbfoaknvlkanlkcan</h1>
-<!-- Hier wird der Footer geladen -->
+  <main>
+    <div class="task-input">
+      <input type="text" id="taskTitle" placeholder="Aufgabe Titel hinzufügen...">
+      <textarea id="taskDescription" placeholder="Aufgabe Beschreibung hinzufügen..."></textarea>
+      <input type="date" id="taskDueDate">
+      <select id="taskPriority">
+        <option value="1">Niedrig</option>
+        <option value="2">Mittel</option>
+        <option value="3">Hoch</option>
+      </select>
+      <button id="addTaskButton">Aufgabe hinzufügen</button>
+    </div>
+<hr>
+    <div class="task-sections">
+      <div class="task-section">
+        <h2>In Bearbeitung</h2>
+        <ul id="inProgressList" class="task-list"></ul>
+      </div>
+
+      <div class="task-section">
+        <h2>Erledigt</h2>
+        <ul id="completedList" class="task-list"></ul>
+      </div>
+
+      <div class="task-section">
+        <h2>Gelöscht</h2>
+        <ul id="deletedList" class="task-list"></ul>
+      </div>
+    </div>
+  </main>
+
 <div id="footer"></div>
-
-
-
 <!-- JavaScript-Datei einbinden -->
   <script src="js/loadLayout.js"></script>
+<script src="js/taskManager.js"></script>
   <script src="js/dashboard.js"></script>
 </body>
 </html>

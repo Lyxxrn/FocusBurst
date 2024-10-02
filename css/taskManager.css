@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Hintergrundfarbe für einen modernen Look */
+    margin: 0;
+    padding: 20px;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    margin: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Responsives Design */
+    max-width: 400px; /* Maximale Breite */
+}
+
+button {
+    padding: 12px;
+    background-color: #38B6FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Responsives Design */
+    max-width: 200px; /* Maximale Breite */
+}
+
+button:hover {
+    background-color: #2a8bcc;
+}
+
+.task-sections {
+    display: flex; /* Flexbox für nebeneinanderliegende Abschnitte */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Erlaubt Zeilenumbruch bei kleinen Bildschirmen */
+}
+
+.task-section {
+    background-color: white; /* Hintergrundfarbe für die Abschnitte */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schattierung für Tiefe */
+    margin: 10px;
+    padding: 15px;
+    flex: 1; /* Gleichmäßige Verteilung */
+    min-width: 250px; /* Minimale Breite für Responsivität */
+    max-width: 30%; /* Maximale Breite */
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.task-info {
+    flex-grow: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsivitätsanpassungen */
+@media (max-width: 768px) {
+    .task-sections {
+        flex-direction: column; /* Stapeln bei kleinen Bildschirmen */
+    }
+
+    .task-section {
+        max-width: 100%; /* Maximale Breite anpassen */
+    }
+}
