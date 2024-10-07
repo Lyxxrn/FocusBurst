@@ -20,37 +20,61 @@
 </head>
 <body>
 <div id="header"></div>
+<hr>
+<main class="task-container">
+  <div class="task-input">
+    <div class="input-group">
+      <input type="text" id="taskTitle" required>
+      <label for="taskTitle">Titel der Aufgabe</label>
+    </div>
 
-  <main>
-    <div class="task-input">
-      <input type="text" id="taskTitle" placeholder="Aufgabe Titel hinzufügen...">
-      <textarea id="taskDescription" placeholder="Aufgabe Beschreibung hinzufügen..."></textarea>
-      <input type="date" id="taskDueDate">
-      <select id="taskPriority">
+    <div class="input-group">
+      <textarea id="taskDescription" rows="4" required></textarea>
+      <label for="taskDescription">Aufgabenbeschreibung</label>
+    </div>
+
+    <div class="input-group">
+      <input type="date" id="taskDueDate" required>
+      <label for="taskDueDate">Fälligkeitsdatum</label>
+    </div>
+
+    <div class="input-group">
+      <select id="taskPriority" required>
+        <option value="" disabled selected>Priorität wählen</option>
         <option value="1">Niedrig</option>
         <option value="2">Mittel</option>
         <option value="3">Hoch</option>
       </select>
-      <button id="addTaskButton">Aufgabe hinzufügen</button>
+      <label for="taskPriority">Priorität</label>
     </div>
-<hr>
-    <div class="task-sections">
-      <div class="task-section">
-        <h2>In Bearbeitung</h2>
+
+    <button id="addTaskButton">Aufgabe hinzufügen</button>
+  </div>
+
+  <div class="task-sections">
+    <div class="task-section" id="inProgressSection">
+      <h2>In Bearbeitung <span class="task-count">(0)</span></h2>
+      <div class="task-list-container">
         <ul id="inProgressList" class="task-list"></ul>
       </div>
+    </div>
 
-      <div class="task-section">
-        <h2>Erledigt</h2>
+    <div class="task-section" id="completedSection">
+      <h2>Erledigt <span class="task-count">(0)</span></h2>
+      <div class="task-list-container">
         <ul id="completedList" class="task-list"></ul>
       </div>
+    </div>
 
-      <div class="task-section">
-        <h2>Gelöscht</h2>
+    <div class="task-section" id="deletedSection">
+      <h2>Gelöscht <span class="task-count">(0)</span></h2>
+      <div class="task-list-container">
         <ul id="deletedList" class="task-list"></ul>
       </div>
     </div>
-  </main>
+  </div>
+</main>
+
 
 <div id="footer"></div>
 <!-- JavaScript-Datei einbinden -->

@@ -100,3 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+document.querySelectorAll('.task-section h2').forEach((header) => {
+    header.addEventListener('click', () => {
+        const section = header.parentElement;
+        section.classList.toggle('open');
+    });
+});
+
+// Beispiel zur Aktualisierung der Aufgabenzahl
+function updateTaskCount(sectionId, count) {
+    const section = document.getElementById(sectionId);
+    section.querySelector('.task-count').textContent = `(${count})`;
+}

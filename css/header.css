@@ -34,30 +34,7 @@ header {
     transform: scale(1.05); /* Leichtes Vergrößern bei Hover */
 }
 
-/* Suchleiste */
-.search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: left;
-    margin: 0 20px;
-    max-width: 400px; /* Begrenzte Breite für bessere Lesbarkeit */
-}
 
-.search-bar {
-    flex-grow: 1;
-    padding: 10px;
-    border-radius: 25px; /* Abgerundete Ecken für modernen Look */
-    border: 1px solid #ddd;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Innen-Schatten für Tiefe */
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-bar:focus {
-    border-color: #38B6FF;
-    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5); /* Fokus-Highlight */
-    outline: none;
-}
 
 /* Navigation */
 .nav-links {
