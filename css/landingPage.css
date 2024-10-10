@@ -1,8 +1,7 @@
 /* Hauptbereich der Landing Page */
 main {
+    min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Hauptüberschrift */
