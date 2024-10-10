@@ -1,9 +1,6 @@
 main {
-    padding: 80px 20px; /* Platz schaffen, da der Header fixiert ist */
-    background-color: #f9f9f9; /* Leicht grauer Hintergrund, um sich vom Header und Footer abzuheben */
-    color: #333; /* Dunkle Textfarbe für gute Lesbarkeit */
-    min-height: 100vh; /* Stellt sicher, dass der Inhalt mindestens die Höhe des Viewports einnimmt */
-    box-sizing: border-box;
+    min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
+    padding: 20px;
 }
 
 main h1 {

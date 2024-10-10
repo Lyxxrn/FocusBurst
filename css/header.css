@@ -1,7 +1,7 @@
 /* Header-Stile */
 header {
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
     align-items: center;
     padding: 15px 30px; /* Mehr Padding für besseren Abstand */
     background-color: #38B6FF; /* Primärfarbe */
