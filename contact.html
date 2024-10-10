@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Focus Burst</title>
+
+  <!-- Globale Styles -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- Layout-Styles (Header, Footer, etc.) -->
+
+
+  <!-- Komponenten-Styles (Buttons, Formulare, etc.) -->
+
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main>
+  <h1>Kontakt</h1>
+
+  <section class="contact-info">
+    <h2>Unsere Kontaktinformationen</h2>
+    <p>Wir freuen uns über Ihre Nachricht! Sie können uns über die folgenden Wege erreichen:</p>
+
+    <h3>Adresse:</h3>
+    <p>Focus Burst GmbH<br>Hauptstraße 123<br>12345 Musterstadt</p>
+
+    <h3>Telefon:</h3>
+    <p>+49 (0) 123 456 7890</p>
+
+    <h3>E-Mail:</h3>
+    <p><a href="mailto:kontakt@focusburst.de">kontakt@focusburst.de</a></p>
+  </section>
+
+  <section class="contact-form">
+    <h2>Schreiben Sie uns eine Nachricht</h2>
+    <form action="#" method="POST">
+      <label for="name">Ihr Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Ihre E-Mail-Adresse:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Ihre Nachricht:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </section>
+</main>
+
+<div id="footer"></div>
+
+<!-- JavaScript-Datei einbinden -->
+<script src="js/loadLayout.js"></script>
+
+</body>
+</html>

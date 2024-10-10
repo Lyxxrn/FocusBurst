@@ -1,0 +1,88 @@
+/* Header-Stile */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Mehr Padding für besseren Abstand */
+    background-color: #38B6FF; /* Primärfarbe */
+    color: white;
+    position: sticky; /* Verbesserte Sticky-Navigation */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Inkludiere Padding und Border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiler Schatten für Tiefe */
+    transition: background-color 0.3s ease; /* Weicher Übergang beim Scrollen */
+}
+
+/* Logo und Profilfoto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    flex: 0 1 auto;
+}
+
+.logo {
+    height: 100%; /* Passt die Höhe des Logos an die Höhe des Containers an */
+    width: auto;
+    transition: transform 0.3s ease; /* Leichte Animation beim Hover */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Leichtes Vergrößern bei Hover */
+}
+
+
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Abstand zwischen den Links */
+}
+
+.nav-links ul li {
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links ul li a:hover {
+    background-color: #2a8bcc;
+    color: #fff; /* Leicht dunklerer Hintergrund beim Hover */
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Staple Inhalte für kleine Bildschirme */
+        padding: 10px 20px;
+    }
+
+    .search-container {
+        margin: 10px 0;
+        max-width: 100%; /* Suchleiste über volle Breite */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px; /* Vertikales Layout für die Links */
+    }
+}

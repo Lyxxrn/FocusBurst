@@ -1,0 +1,43 @@
+/* Datenschutz */
+main {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.privacy {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.privacy p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.privacy p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.privacy p a:hover {
+    text-decoration: underline;
+}
