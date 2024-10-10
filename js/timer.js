@@ -8,6 +8,10 @@ function setTimer(minutes) {
         if (minutes === 25) {
             cycleCount++;
         }
+        if (cycleCount > 4) {
+            cycleCount = 0;
+            setTimer(25);
+        }
         updateDisplay();
     }
 }
@@ -27,7 +31,7 @@ function countdown() {
         isRunning = false;
         document.getElementById('start-pause-button').innerText = 'Start';
         cycleCount++;
-        if (cycleCount % 8 === 0) {
+        if (cycleCount % 4 === 0) {
             setTimer(45);
         } else if (cycleCount % 2 === 0) {
             setTimer(5);
