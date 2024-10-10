@@ -1,69 +1,149 @@
-/* taskManager.css */
-
-/* Zusätzliche Stile für die Input-Gruppe, falls erforderlich */
-.input-group {
-    position: relative;
+/* Container */
+.container {
+    max-width: 1200px; /* Etwas breiter für größere Bildschirme */
+    padding: 20px; /* Mehr Innenabstand */
+    margin: auto;
 }
 
-.input-group label {
-    position: absolute;
-    top: -10px;
-    left: 15px;
-    background-color: white;
-    padding: 0 5px;
-    font-size: 0.8rem;
+/* Margin Top */
+.mt-5 {
+    margin-top: 4rem; /* Mehr Abstand oben */
 }
 
-.input-group input,
-.input-group textarea,
-.input-group select {
-    margin-top: 1.5rem;
-}
-
-/* Styles für Task-Listen */
-.task-list-container {
-    margin-top: 20px;
-}
-
-.task-item {
+/* Row */
+.row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    flex-wrap: wrap;
+    margin-right: -10px; /* Reduziere negative Margen */
+    margin-left: -10px;
 }
 
-.task-info {
-    flex-grow: 1;
+/* Column */
+.col-md-5, .col-md-7 {
+    position: relative;
+    width: 100%;
+    padding-left: 10px; /* Reduziere Padding */
+    padding-right: 10px;
 }
 
-.task-info strong {
+/* Card */
+.card {
+    border: none; /* Entferne den Rand für ein saubereres Aussehen */
+    border-radius: .5rem; /* Abgerundete Ecken */
+    background-color: #f8f9fa; /* Heller Hintergrund für Karten */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+}
+
+/* Card Padding */
+.p-4 {
+    padding: 2rem; /* Mehr Innenabstand */
+}
+
+/* Margin Bottom */
+.mb-4 {
+    margin-bottom: 2rem; /* Mehr Abstand unten */
+}
+
+/* Heading Styles */
+h4, h5 {
+    font-family: 'Arial', sans-serif; /* Gut lesbare Schriftart */
+    margin-bottom: 1rem; /* Abstand vergrößern */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem; /* Mehr Abstand unten */
+}
+
+/* Form Control */
+.form-control {
     display: block;
+    width: 100%;
+    padding: .5rem 1rem; /* Innenabstand vergrößern */
+    font-size: 1rem; /* Schriftgröße */
+    line-height: 1.5; /* Zeilenhöhe */
+    color: #495057; /* Textfarbe */
+    background-color: #fff; /* Hintergrundfarbe */
+    border: 1px solid #ced4da; /* Rand */
+    border-radius: .5rem; /* Abgerundete Ecken */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Übergangseffekte */
 }
 
-.task-info p {
-    margin: 0;
-    font-size: 0.9rem;
+.form-control:focus {
+    border-color: #007bff; /* Randfarbe im Fokus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Schatten im Fokus */
 }
 
-.task-info small {
+/* Button */
+.btn {
+    display: inline-block;
+    font-weight: bold; /* Fettgedruckt für bessere Sichtbarkeit */
+    text-align: center;
+    border: none; /* Entferne den Rand */
+    padding: .5rem 1rem; /* Innenabstand */
+    border-radius: .5rem; /* Abgerundete Ecken */
+    transition: background-color 0.3s, transform 0.2s; /* Übergangseffekte */
+}
+
+/* Primary Button */
+.btn-primary {
+    color: #fff; /* Textfarbe */
+    background-color: #007bff; /* Hintergrundfarbe */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Dunkler bei Hover */
+    transform: scale(1.05); /* Vergrößern bei Hover */
+}
+
+/* Button Block */
+.btn-block {
     display: block;
-    color: #6c757d;
+    width: 100%; /* Vollständige Breite */
 }
 
-.task-item button {
-    margin-left: 10px;
+/* List Group */
+.list-group {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none; /* Keine Aufzählungszeichen */
 }
 
+/* List Group Item */
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem; /* Innenabstand */
+    border: 1px solid rgba(0, 0, 0, 0.125); /* Rand */
+    background-color: #fff; /* Hintergrundfarbe */
+}
+
+/* Card Header */
 .card-header {
-    cursor: pointer;
+    padding: .75rem 1.25rem; /* Innenabstand */
+    background-color: #e9ecef; /* Heller Hintergrund für Header */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); /* Unterer Rand */
 }
 
-.task-section h5 {
-    margin: 0;
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: .25em .6em; /* Innenabstand */
+    font-size: .75em; /* Schriftgröße */
+    font-weight: 700; /* Schriftstärke */
+    color: #fff; /* Textfarbe */
+    border-radius: .5rem; /* Abgerundete Ecken */
 }
 
-.task-count {
-    font-size: 1rem;
+/* Badge Colors */
+.badge-secondary {
+    background-color: #6c757d; /* Hintergrundfarbe für sekundär */
+}
+
+.badge-success {
+    background-color: #28a745; /* Hintergrundfarbe für Erfolg */
+}
+
+.badge-danger {
+    background-color: #dc3545; /* Hintergrundfarbe für Gefahr */
 }
