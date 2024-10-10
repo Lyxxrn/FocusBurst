@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const timezoneSelector = document.getElementById('timezone-selector');
+    const timezoneSelector = document.getElementById('timezone');
 
     // Liste aller Zeitzonen
     const timezones = [

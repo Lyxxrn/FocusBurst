@@ -30,7 +30,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     const password = document.getElementById('password').value;
 
     // Dummy-Validierung (ersetze dies durch deine eigene Logik)
-    if (email === "test@ex.com" && password === "password") {
+    if (email === "1@1.com" && password === "password") {
         // Erfolgreicher Login - weiter zur Homepage
         window.location.href = 'index.html'; // Ändere dies zu deiner tatsächlichen Homepage
     } else {
