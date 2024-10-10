@@ -9,7 +9,7 @@ header {
     position: sticky; /* Verbesserte Sticky-Navigation */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     box-sizing: border-box; /* Inkludiere Padding und Border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiler Schatten für Tiefe */
