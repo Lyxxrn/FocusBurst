@@ -1,16 +1,4 @@
 /* Datenschutz */
-main {
-    min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
-    padding: 20px;
-}
-
-main h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-}
-
 .privacy {
     max-width: 800px;
     margin: 0 auto;

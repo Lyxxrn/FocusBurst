@@ -6,7 +6,7 @@
   <title>Focus Burst</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/taskManager.css">
+
 
 
  </head>
@@ -16,7 +16,6 @@
 
  <main>
    <div id="timer-container">
-     <h2>Pomodoro Timer</h2>
      <div id="timer-buttons">
        <button onclick="setTimer(25)">Pomodoro</button>
        <button onclick="setTimer(5)">Kurze Pause</button>
@@ -25,6 +24,9 @@
      <div id="timer">
        <div id="timer-display">
          <span id="timer-minutes">25</span>:<span id="timer-seconds">00</span>
+       </div>
+       <div id="timer-phase">
+         Phase: <span id="timer-count">1</span>
        </div>
      </div>
      <button id="start-pause-button" onclick="startPauseTimer()">Start</button>

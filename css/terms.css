@@ -1,18 +1,4 @@
 /* Nutzungsbedingungen */
-main {
-    padding: 80px 20px;
-    background-color: #f9f9f9;
-    color: #333;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-main h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-}
 
 .terms {
     max-width: 800px;

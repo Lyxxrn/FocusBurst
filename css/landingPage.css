@@ -1,26 +1,3 @@
-/* Hauptbereich der Landing Page */
-main {
-    min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
-    padding: 20px;
-}
-
-/* Hauptüberschrift */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-    text-align: center;
-    font-weight: 700; /* Stärkeres Gewicht für bessere Lesbarkeit */
-    line-height: 1.2; /* Engere Zeilenhöhe */
-}
-
-/* Paragraphen */
-p {
-    font-size: 1.125rem; /* Etwas größere Schrift für Lesbarkeit */
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #333; /* Dunklere Textfarbe */
-}
 
 /* Call to Action Button */
 #loginButton {

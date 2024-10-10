@@ -1,8 +1,5 @@
 /* Profilseite */
-main {
-    min-height: calc(100vh - 100px); /* 100px ist die geschätzte Höhe von Header und Footer */
-    padding: 20px;
-}
+
 .profile-container {
     display: flex;
     max-width: 1200px;
