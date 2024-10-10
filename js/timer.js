@@ -5,6 +5,9 @@ let cycleCount = 0;
 function setTimer(minutes) {
     if (!isRunning) {
         timeLeft = minutes * 60;
+        if (minutes === 25) {
+            cycleCount++;
+        }
         updateDisplay();
     }
 }
@@ -42,6 +45,7 @@ function updateDisplay() {
     const seconds = timeLeft % 60;
     const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     document.getElementById('timer-display').innerText = formattedTime;
+    document.getElementById('timer-count').innerText = cycleCount;
     document.title = `Timer - ${formattedTime}`;
 }
 // Initial Timer Setting
