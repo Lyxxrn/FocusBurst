@@ -5,81 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deine Seite</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Globale Styles -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/global.css">
-
-
-
-  <!-- Spezifische Styles für die Dashboard Page -->
   <link rel="stylesheet" href="css/dashboard.css">
-<link rel="stylesheet" href="css/taskManager.css">
-  <!-- Komponenten-Styles (Buttons, Formulare, etc.) -->
-
-
+  <link rel="stylesheet" href="css/taskManager.css">
 </head>
 <body>
+
 <div id="header"></div>
 <hr>
-<main class="task-container">
-  <div class="task-input">
-    <div class="input-group">
-      <input type="text" id="taskTitle" required>
-      <label for="taskTitle">Titel der Aufgabe</label>
-    </div>
 
-    <div class="input-group">
-      <textarea id="taskDescription" rows="4" required></textarea>
-      <label for="taskDescription">Aufgabenbeschreibung</label>
-    </div>
+<main class="container mt-5">
+  <div class="row">
+    <!-- Task Input -->
+    <div class="col-md-5">
+      <div class="card p-4 mb-4">
+        <h4 class="mb-3">Neue Aufgabe hinzufügen</h4>
 
-    <div class="input-group">
-      <input type="date" id="taskDueDate" required>
-      <label for="taskDueDate">Fälligkeitsdatum</label>
-    </div>
+        <!-- Task Title Input -->
+        <div class="form-group">
+          <label for="taskTitle">Titel der Aufgabe</label>
+          <input type="text" class="form-control" id="taskTitle" required placeholder="Titel eingeben">
+        </div>
 
-    <div class="input-group">
-      <select id="taskPriority" required>
-        <option value="" disabled selected>Priorität wählen</option>
-        <option value="1">Niedrig</option>
-        <option value="2">Mittel</option>
-        <option value="3">Hoch</option>
-      </select>
-      <label for="taskPriority">Priorität</label>
-    </div>
+        <!-- Task Description Input -->
+        <div class="form-group">
+          <label for="taskDescription">Aufgabenbeschreibung</label>
+          <textarea class="form-control" id="taskDescription" rows="4" required placeholder="Beschreibung eingeben"></textarea>
+        </div>
 
-    <button id="addTaskButton">Aufgabe hinzufügen</button>
-  </div>
+        <!-- Due Date Input -->
+        <div class="form-group">
+          <label for="taskDueDate">Fälligkeitsdatum</label>
+          <input type="date" class="form-control" id="taskDueDate" required>
+        </div>
 
-  <div class="task-sections">
-    <div class="task-section" id="inProgressSection">
-      <h2>In Bearbeitung <span class="task-count">(0)</span></h2>
-      <div class="task-list-container">
-        <ul id="inProgressList" class="task-list"></ul>
+        <!-- Priority Input -->
+        <div class="form-group">
+          <label for="taskPriority">Priorität</label>
+          <select class="form-control" id="taskPriority" required>
+            <option value="" disabled selected>Priorität wählen</option>
+            <option value="1">Niedrig</option>
+            <option value="2">Mittel</option>
+            <option value="3">Hoch</option>
+          </select>
+        </div>
+
+        <!-- Add Task Button -->
+        <button id="addTaskButton" class="btn btn-primary btn-block">Aufgabe hinzufügen</button>
       </div>
     </div>
 
-    <div class="task-section" id="completedSection">
-      <h2>Erledigt <span class="task-count">(0)</span></h2>
-      <div class="task-list-container">
-        <ul id="completedList" class="task-list"></ul>
+    <!-- Task Sections -->
+    <div class="col-md-7">
+      <!-- In Progress Section -->
+      <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5>In Bearbeitung</h5>
+          <span class="badge badge-secondary task-count">(0)</span>
+        </div>
+        <ul id="inProgressList" class="list-group list-group-flush"></ul>
       </div>
-    </div>
 
-    <div class="task-section" id="deletedSection">
-      <h2>Gelöscht <span class="task-count">(0)</span></h2>
-      <div class="task-list-container">
-        <ul id="deletedList" class="task-list"></ul>
+      <!-- Completed Section -->
+      <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5>Erledigt</h5>
+          <span class="badge badge-success task-count">(0)</span>
+        </div>
+        <ul id="completedList" class="list-group list-group-flush"></ul>
+      </div>
+
+      <!-- Deleted Section -->
+      <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5>Gelöscht</h5>
+          <span class="badge badge-danger task-count">(0)</span>
+        </div>
+        <ul id="deletedList" class="list-group list-group-flush"></ul>
       </div>
     </div>
   </div>
 </main>
 
-
 <div id="footer"></div>
-<!-- JavaScript-Datei einbinden -->
-  <script src="js/loadLayout.js"></script>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/loadLayout.js"></script>
 <script src="js/taskManager.js"></script>
-  <script src="js/dashboard.js"></script>
+<script src="js/dashboard.js"></script>
+
 </body>
 </html>

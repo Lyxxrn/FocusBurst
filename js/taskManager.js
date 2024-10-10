@@ -1,5 +1,3 @@
-// taskManager.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const addTaskButton = document.getElementById("addTaskButton");
     const taskTitleInput = document.getElementById("taskTitle");
@@ -26,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Erstelle ein neues Listenelement
         const listItem = document.createElement("li");
-        listItem.classList.add("task-item");
+        listItem.classList.add("list-group-item", "task-item");
 
         // Füge den Inhalt zum Listenelement hinzu
         listItem.innerHTML = `
@@ -35,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>${description}</p>
                 <small>Fällig am: ${dueDate} | Priorität: ${getPriorityText(priority)}</small>
             </div>
-            <button class="complete-btn">Erledigt</button>
-            <button class="delete-btn">Löschen</button>
+            <button class="btn btn-success complete-btn">Erledigt</button>
+            <button class="btn btn-danger delete-btn">Löschen</button>
         `;
 
         // Event Listener für die Erledigt-Schaltfläche
@@ -54,29 +52,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Leere die Eingabefelder nach dem Hinzufügen
         resetInputFields();
+
+        // Aktualisiere die Aufgabenzähler
+        updateTaskCount("inProgressSection", inProgressList.children.length);
     }
 
     function moveToCompleted(listItem) {
         completedList.appendChild(listItem);
         listItem.querySelector(".complete-btn").remove(); // Entferne den Erledigt-Button
         listItem.querySelector(".delete-btn").textContent = "Endgültig Löschen";
+        listItem.querySelector(".delete-btn").classList.replace("btn-danger", "btn-warning");
+
+        // Event Listener für endgültiges Löschen hinzufügen
         listItem.querySelector(".delete-btn").addEventListener("click", () => {
             finalDeleteTask(listItem);
         });
+
+        // Aktualisiere die Aufgabenzähler
+        updateTaskCount("completedSection", completedList.children.length);
+        updateTaskCount("inProgressSection", inProgressList.children.length);
     }
 
     function moveToDeleted(listItem) {
         deletedList.appendChild(listItem);
         listItem.querySelector(".complete-btn").remove(); // Entferne den Erledigt-Button
         listItem.querySelector(".delete-btn").textContent = "Endgültig Löschen";
+        listItem.querySelector(".delete-btn").classList.replace("btn-danger", "btn-secondary");
+
+        // Event Listener für endgültiges Löschen hinzufügen
         listItem.querySelector(".delete-btn").addEventListener("click", () => {
             finalDeleteTask(listItem);
         });
+
+        // Aktualisiere die Aufgabenzähler
+        updateTaskCount("deletedSection", deletedList.children.length);
+        updateTaskCount("inProgressSection", inProgressList.children.length);
     }
 
+    // Finales Löschen einer Aufgabe nach Bestätigung
     function finalDeleteTask(listItem) {
         if (confirm("Sind Sie sicher, dass Sie diese Aufgabe endgültig löschen möchten?")) {
             listItem.remove();
+
+            // Aktualisiere die Aufgabenzähler nach dem endgültigen Löschen
+            updateTaskCount("completedSection", completedList.children.length);
+            updateTaskCount("deletedSection", deletedList.children.length);
         }
     }
 
@@ -99,16 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return "Unbekannt";
         }
     }
-});
-document.querySelectorAll('.task-section h2').forEach((header) => {
-    header.addEventListener('click', () => {
-        const section = header.parentElement;
-        section.classList.toggle('open');
-    });
-});
 
-// Beispiel zur Aktualisierung der Aufgabenzahl
-function updateTaskCount(sectionId, count) {
-    const section = document.getElementById(sectionId);
-    section.querySelector('.task-count').textContent = `(${count})`;
-}
+    function updateTaskCount(sectionId, count) {
+        const section = document.getElementById(sectionId);
+        section.querySelector('.task-count').textContent = `(${count})`;
+    }
+});

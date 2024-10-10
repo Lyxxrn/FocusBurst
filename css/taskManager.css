@@ -1,194 +1,69 @@
-/* Container für die gesamte Task-Verwaltung */
-.task-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-}
+/* taskManager.css */
 
-/* Task Input Styling */
-.task-input {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    max-width: 45%; /* Die Task-Eingabe nimmt 45% des Containers ein */
-}
-
+/* Zusätzliche Stile für die Input-Gruppe, falls erforderlich */
 .input-group {
     position: relative;
-    margin-bottom: 20px;
-    box-sizing: border-box;
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
+.input-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 0.8rem;
 }
 
-input:focus, textarea:focus, select:focus {
-    border-color: #38B6FF;
-    box-shadow: 0 0 8px rgba(56, 182, 255, 0.2);
+.input-group input,
+.input-group textarea,
+.input-group select {
+    margin-top: 1.5rem;
 }
 
-textarea {
-    resize: vertical;
+/* Styles für Task-Listen */
+.task-list-container {
+    margin-top: 20px;
 }
 
-/* Task Sections Styling */
-.task-sections {
-    flex: 1.5;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    max-width: 50%; /* Die Task-Sektionen nehmen 50% des Containers ein */
-}
-
-.task-section {
-    margin-bottom: 20px;
-}
-
-.task-section h2 {
+.task-item {
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
-    padding: 12px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
 }
 
-.task-section h2:hover {
-    background-color: #e0e0e0;
+.task-info {
+    flex-grow: 1;
 }
 
-.task-list-container {
-    display: none; /* Eingeklappt standardmäßig */
-}
-
-.task-section.open .task-list-container {
+.task-info strong {
     display: block;
 }
 
-.task-count {
+.task-info p {
+    margin: 0;
     font-size: 0.9rem;
-    color: #777777;
 }
 
-/* Für kleinere Bildschirme */
-@media (max-width: 768px) {
-    .task-container {
-        flex-direction: column;
-    }
-
-    .task-input, .task-sections {
-        max-width: 100%;
-    }
+.task-info small {
+    display: block;
+    color: #6c757d;
 }
 
-/* Floating Label Style */
-input:focus + label, textarea:focus + label, select:focus + label,
-input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label, select:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
-    font-size: 0.85rem;
-    color: #38B6FF;
-    background-color: white;
-    padding: 0 5px;
+.task-item button {
+    margin-left: 10px;
 }
 
-label {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    font-size: 1rem;
-    color: #777777;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-
-/* Kompaktere und stylische Aufgaben */
-.task-item {
-    padding: 12px;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    background-color: #e6e6e6;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20); /* Leichter Schatten */
-    transition: transform 0.2s ease-in-out;
-}
-
-.task-item:hover {
-    transform: translateY(-5px); /* Leichter Hover-Effekt */
-}
-
-.task-item .task-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333333;
-}
-
-.task-item .task-dates, .task-item .remaining-days {
-    font-size: 0.9rem;
-    color: #777777;
-    margin-top: 5px;
-}
-
-.task-item .remaining-days {
-    font-weight: bold;
-    color: #FF5722;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-/* Moderner Button-Stil */
-button, .delete-btn, .complete-btn {
-    padding: 12px;
-    font-size: 1rem;
-    background-color: #38B6FF;
-    color: white;
-    border: none;
-    border-radius: 8px;
+.card-header {
     cursor: pointer;
-    transition: background-color 0.3s ease;
-
 }
 
-button:hover, .delete-btn:hover, .complete-btn:hover {
-    background-color: #2a8bcc;
+.task-section h5 {
+    margin: 0;
 }
 
-.delete-btn {
-    background-color: #ff5252;
+.task-count {
+    font-size: 1rem;
 }
-
-.delete-btn:hover {
-    background-color: #d32f2f;
-}
-
-.complete-btn {
-    background-color: #4CAF50;
-}
-
-.complete-btn:hover {
-    background-color: #45a049;
-}
-
-
