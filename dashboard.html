@@ -6,6 +6,7 @@
   <title>Focus Burst</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/components.css">
 
 
 
@@ -67,12 +68,29 @@
       </div>
 
       <!-- Task Sections -->
-      <div class="col-md-7">
+
+       <!-- Created Section -->
+       <div class="col-md-7">
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5>Erstellt</h5>
+            <div class="header-right">
+              <span class="badge badge-primary task-count">(0)</span>
+              <span class="arrow">&#9654;</span> <!-- Pfeil-Icon -->
+            </div>
+          </div>
+         <ul id="createdList" class="list-group list-group-flush"></ul>
+        </div>
+
+
         <!-- In Progress Section -->
         <div class="card mb-4">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5>In Bearbeitung</h5>
-            <span class="badge badge-secondary task-count">(0)</span>
+            <div class="header-right">
+              <span class="badge badge-secondary task-count">(0)</span>
+              <span class="arrow">&#9654;</span> <!-- Pfeil-Icon -->
+            </div>
           </div>
           <ul id="inProgressList" class="list-group list-group-flush"></ul>
         </div>
@@ -80,8 +98,11 @@
         <!-- Completed Section -->
         <div class="card mb-4">
           <div class="card-header d-flex justify-content-between align-items-center">
-            <h5>Erledigt</h5>
-            <span class="badge badge-success task-count">(0)</span>
+            <h5>Abgeschlossen</h5>
+            <div class="header-right">
+              <span class="badge badge-success task-count">(0)</span>
+              <span class="arrow">&#9654;</span> <!-- Pfeil-Icon -->
+            </div>
           </div>
           <ul id="completedList" class="list-group list-group-flush"></ul>
         </div>
@@ -90,7 +111,10 @@
         <div class="card mb-4">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5>Gelöscht</h5>
-            <span class="badge badge-danger task-count">(0)</span>
+            <div class="header-right">
+              <span class="badge badge-danger task-count">(0)</span>
+              <span class="arrow">&#9654;</span> <!-- Pfeil-Icon -->
+            </div>
           </div>
           <ul id="deletedList" class="list-group list-group-flush"></ul>
         </div>

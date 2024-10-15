@@ -7,11 +7,9 @@
 
   <!-- Globale Styles -->
   <link rel="stylesheet" href="css/global.css">
-
+  <link rel="stylesheet" href="css/components.css">
   <!-- Spezifische Styles für die Startseite -->
-  <link rel="stylesheet" href="css/StartingPage.css"> <!-- neue CSS-Datei für den Body -->
-
-
+  <link rel="stylesheet" href="css/StartingPage.css">
 </head>
 <body>
 <section class="hero">
@@ -20,10 +18,18 @@
     <h1>Learn Smart, Not Hard</h1>
     <p>Fokussiertes Lernen leicht gemacht.</p>
     <button class="cta-button" id="openModalButton">Jetzt starten</button> <!-- Button zum Öffnen des Modals -->
+
+    <!-- YouTube Video Bereich -->
+    <div class="video-section">
+      <h2>Schau dir unser Einführungsvideo an</h2>
+      <iframe src="images/Effizient%20lernen%20dank%20einer%20Tomate_%20👨_🏫🍅%20Die%20Pomodoro%20Technik%20kurz%20erklärt%20-%20Zeitmanagement%20Methode.mp4"
+              title="Einführungsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
   </div>
 </section>
 
-<!-- Modal -->
+<!-- Login Modal -->
 <div class="modal" id="loginModal">
   <div class="modal-content">
     <span class="close" id="closeModal">&times;</span>
@@ -35,10 +41,30 @@
       <input type="password" id="password" name="password" required>
       <button type="submit">Anmelden</button> <!-- Button zum Anmelden -->
     </form>
+    <p>Noch kein Konto? <a href="#" id="openRegisterModal">Klicke hier</a></p> <!-- Link zum Öffnen des Registrierungsmodals -->
+  </div>
+</div>
+
+<!-- Registrierungs Modal -->
+<div class="modal" id="registerModal">
+  <div class="modal-content">
+    <span class="close" id="closeRegisterModal">&times;</span>
+    <h2>Registrieren</h2>
+    <form id="registerForm">
+      <label for="registerEmail">E-Mail:</label>
+      <input type="email" id="registerEmail" name="registerEmail" required>
+      <label for="registerPassword">Passwort:</label>
+      <input type="password" id="registerPassword" name="registerPassword" required>
+      <label for="confirmPassword">Passwort bestätigen:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+      <button type="submit">Registrieren</button> <!-- Button zum Registrieren -->
+    </form>
+    <p id="error-message" style="color: red;"></p> <!-- Fehlermeldung -->
   </div>
 </div>
 
 <!-- JavaScript-Dateien einbinden -->
 <script src="js/login.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>

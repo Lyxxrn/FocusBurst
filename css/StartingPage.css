@@ -79,115 +79,37 @@
     }
 }
 
-/* Modal Styles *//* Modal (Login Form) Styles */
-.modal {
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); /* Exakte Zentrierung */
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none; /* Flexbox für bessere Ausrichtung */
-    justify-content: center;
-    align-items: center; /* Zentrale vertikale und horizontale Ausrichtung */
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-
-
-
-/* Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #666;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #ff5252;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-label {
-    text-align: left;
-    font-size: 1rem;
-    color: #333;
-}
-
-input {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Button Styles */
-button{
-    padding: 12px;
-    border-radius: 25px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Video-Bereich im Hero */
+.hero .video-section {
+    margin-top: 40px; /* Abstand nach oben zum restlichen Hero-Inhalt */
     text-align: center;
 }
 
-button:hover {
-    background-color: #2a8bcc;
-    transform: translateY(-2px);
+.hero .video-section h2 {
+    font-size: 1.8rem; /* Etwas kleinere Schriftgröße, um zum Hero-Text zu passen */
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2e2e2e; /* Gleiche Farbe wie der Rest des Hero-Texts */
 }
 
-button:active {
-    background-color: #1d6a99;
-    transform: translateY(0);
+.hero .video-section iframe {
+    width: 100%; /* Volle Breite auf kleineren Bildschirmen */
+    max-width: 560px; /* Begrenzung auf die maximale Breite */
+    height: 315px; /* Standard 16:9 Video-Höhe */
+    border: none; /* Kein Rand um das Video */
+    border-radius: 10px; /* Leicht abgerundete Ecken für einen modernen Look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für Tiefe */
+    margin: 0 auto; /* Zentrierung des Videos */
 }
-
-/* Responsive Design for Modal */
+/* Responsive Design for Video Section */
 @media (max-width: 600px) {
-    .modal-content {
-        width: 90%;
-        padding: 30px 20px;
+    .video-section h2 {
+        font-size: 2rem; /* Kleinere Überschrift auf kleinen Bildschirmen */
+    }
+
+    .video-container {
+        width: 100%; /* Volle Breite auf kleinen Bildschirmen */
+        border-radius: 10px; /* Kleinere abgerundete Ecken auf kleinen Bildschirmen */
     }
 }
 
-@media (min-width: 601px) {
-    .modal-content {
-        width: 100%;
-        max-width: 400px;
-        padding: 40px 30px;
-    }
-}

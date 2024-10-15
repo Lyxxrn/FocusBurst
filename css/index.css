@@ -1,0 +1,99 @@
+/* Container Styling */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1.2fr); /* Drei Spalten, jede etwas breiter */
+    gap: 20px;
+    max-width: 1400px; /* Erhöhte Breite des Containers */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+
+/* Info Box Styling */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effekt für die Box */
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Full-Width Box Styling */
+.full-width {
+    grid-column: span 3; /* Streckt die Box über alle drei Spalten */
+}
+
+/* Text-Styles innerhalb der Box */
+.info-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-box p,
+.info-box li {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.info-box ol, .info-box ul {
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Anpassungen */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Auf zwei Spalten auf Tablets wechseln */
+    }
+
+    .full-width {
+        grid-column: span 2; /* Streckt sich über zwei Spalten bei kleinerem Viewport */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1.2fr); /* Drei Spalten, jede etwas breiter */
+    }
+
+    .full-width {
+        grid-column: span 3; /* Bleibt über drei Spalten auf großen Bildschirmen */
+    }
+}
+
+/* Review Styling */
+.user-reviews {
+    margin-top: 20px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.review p {
+    font-style: italic;
+    color: #555;
+}
+
+.review strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}

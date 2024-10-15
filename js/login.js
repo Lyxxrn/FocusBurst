@@ -4,13 +4,14 @@ const loginModal = document.getElementById('loginModal');
 const closeModal = document.getElementById('closeModal');
 
 // EventListener für das Öffnen des Modals
-openModalButton.addEventListener('click', () => {
-    loginModal.style.display = 'flex'; // Zeigt das Modal mittig an
+// Öffnen des Login Modals
+document.getElementById("openModalButton").addEventListener("click", function() {
+    document.getElementById("loginModal").style.display = "flex";  // Setze auf "flex" anstelle von "block"
 });
 
-// EventListener für das Schließen des Modals
-closeModal.addEventListener('click', () => {
-    loginModal.style.display = 'none'; // Versteckt das Modal wieder
+// Schließen des Login Modals
+document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("loginModal").style.display = "none";
 });
 
 // Optional: Schließen des Modals, wenn außerhalb geklickt wird
