@@ -51,17 +51,27 @@
     <span class="close" id="closeRegisterModal">&times;</span>
     <h2>Registrieren</h2>
     <form id="registerForm">
+      <label for="firstName">Vorname:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Nachname:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
       <label for="registerEmail">E-Mail:</label>
       <input type="email" id="registerEmail" name="registerEmail" required>
+
       <label for="registerPassword">Passwort:</label>
       <input type="password" id="registerPassword" name="registerPassword" required>
+
       <label for="confirmPassword">Passwort bestätigen:</label>
       <input type="password" id="confirmPassword" name="confirmPassword" required>
+
       <button type="submit">Registrieren</button> <!-- Button zum Registrieren -->
     </form>
     <p id="error-message" style="color: red;"></p> <!-- Fehlermeldung -->
   </div>
 </div>
+
 
 <!-- JavaScript-Dateien einbinden -->
 <script src="js/login.js"></script>
