@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Focus Burst</title>
+  <title>Focus Burst - Statistikübersicht</title>
 
   <!-- Globale Styles -->
   <link rel="stylesheet" href="css/global.css">
 
-
-
   <!-- Spezifische Styles für die Stats Page -->
   <link rel="stylesheet" href="css/stats.css">
 
-  <!-- Komponenten-Styles (Buttons, Formulare, etc.) -->
-
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<!-- Hier wird der Header geladen -->
 <div id="header"></div>
 
-<!-- Hauptinhalt der Seite -->
-<main>
-  <h1>Statistiken</h1>
-  <p>Hier steht der spezifische Inhalt der Seite.</p>
-</main>
+<div class="container">
+  <h1>Statistikübersicht</h1>
 
-<!-- Hier wird der Footer geladen -->
+  <!-- Progressbar für Tasks -->
+
+  <div class="progress-bar-container">
+    <h2> Progress-Bar Tasks</h2>
+    <progress id="taskProgress" value="0" max="100"></progress>
+    <div class="progress-numbers">
+      <span id="completedTasksCount">0</span> <!-- Abgeschlossene Tasks -->
+      <span id="totalTasksCount">0</span> <!-- Alle erstellten Tasks -->
+    </div>
+  </div>
+
+  <!-- Grid für Diagramme -->
+  <div class="canvas-section">
+    <!-- Task-Statistiken -->
+    <div class="info-box">
+      <h2>Abgeschlossene Tasks</h2>
+      <p>Filter für Tasks:
+        <button onclick="filterTaskStats('weekly')">Wöchentlich</button>
+        <button onclick="filterTaskStats('monthly')">Monatlich</button>
+        <button onclick="filterTaskStats('yearly')">Jährlich</button>
+      </p>
+      <p class="currentYearDisplay">Aktuelles Jahr: <span class="currentYear"></span></p>
+      <canvas id="taskChart"></canvas>
+    </div>
+
+    <!-- Pomodoro-Statistiken -->
+    <div class="info-box">
+      <h2>Absolvierte Pomodoros</h2>
+      <p>Filter für Pomodoros:
+        <button onclick="filterPomodoroStats('weekly')">Wöchentlich</button>
+        <button onclick="filterPomodoroStats('monthly')">Monatlich</button>
+        <button onclick="filterPomodoroStats('yearly')">Jährlich</button>
+      </p>
+      <p class="currentYearDisplay">Aktuelles Jahr: <span class="currentYear"></span></p>
+      <canvas id="pomodoroChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Druckfunktion -->
+  <div class="print-section full-width">
+    <button onclick="window.print()">Statistik drucken</button>
+  </div>
+</div>
+
 <div id="footer"></div>
 
-
-
-<!-- JavaScript-Datei einbinden -->
+<script src="js/taskManager.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/stats.js"></script>
 <script src="js/loadLayout.js"></script>
-
 
 </body>
 </html>

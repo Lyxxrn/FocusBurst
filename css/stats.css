@@ -1,0 +1,242 @@
+
+/* Container Styling */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für die Diagramme */
+    grid-gap: 20px;
+    max-width: 1400px; /* Breitere Ansicht */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+
+/* Full-Width Box */
+.full-width {
+    grid-column: span 2; /* Streckt die Box über beide Spalten */
+}
+
+/* Progressbar Container */
+.progress-bar-container {
+    grid-column: span 2; /* Progressbar über beide Spalten */
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Progressbar Styling */
+#taskProgress {
+    width: 100%;
+    height: 50px;
+
+}
+
+#taskProgress::-webkit-progress-value {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+#taskProgress::-moz-progress-bar {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Styling für die Task-Zahlen unter der Progressbar */
+.progress-numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.progress-numbers span {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Der Container hat standardmäßig eine Spalte */
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+
+/* Grid für Diagramme (Zwei Spalten für die Diagramme) */
+.canvas-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Zwei Spalten für die Diagramme */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Info Box Styling */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effekt für die Box */
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text-Styles innerhalb der Box */
+.info-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Canvas Styling */
+canvas {
+    width: 100% !important;
+    max-width: 600px;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .canvas-section {
+        grid-template-columns: 1fr; /* Bei kleineren Bildschirmen auf eine Spalte wechseln */
+    }
+}
+
+/* Druckfunktion Styling */
+.print-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Auf eine Spalte für Mobilgeräte wechseln */
+    }
+
+    .full-width {
+        grid-column: span 1; /* Volle Breite für Mobilgeräte */
+    }
+}
+/* Styling für die Druckfunktion */
+.print-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.print-section button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.print-section button:hover {
+    background-color: #0056b3; /* Dunklere Farbe beim Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+}
+
+.print-section button:active {
+    background-color: #003f7f; /* Noch dunklerer Farbton beim Klicken */
+    transform: translateY(0);
+}
+
+
+
+/* Druckstil */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .container {
+        max-width: 100%; /* Maximale Breite für den Druck */
+        margin: 0;
+        padding: 20px;
+        box-shadow: none; /* Entfernt Boxschatten */
+    }
+
+    .progress-bar-container,
+    .canvas-section,
+    .stat-section {
+        width: 100%; /* Vergrößere alle Sektionen auf volle Breite */
+        margin: 0 auto;
+    }
+
+    .progress-numbers span {
+        font-size: 10pt; /* Kleinere Schriftgröße für Zahlen */
+    }
+
+    .info-box {
+        box-shadow: none; /* Keine Box-Schatten im Druck */
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .canvas-section {
+        display: block; /* Setze Diagramme untereinander für Druck */
+    }
+
+    canvas {
+        width: 100% !important;
+        max-width: 100% !important; /* Volle Breite für Diagramme im Druck */
+        margin-bottom: 20px;
+    }
+
+    .print-section {
+        display: none; /* Verstecke den Druckbutton */
+    }
+
+    /* Header und Footer ausblenden */
+    #header, #footer {
+        display: none;
+    }
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff; /* Hauptfarbe */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Dunkler bei Hover */
+    transform: translateY(-2px); /* Leichtes Anheben beim Hover */
+}
+
+button:active {
+    background-color: #004494; /* Noch dunkler beim Klicken */
+    transform: translateY(0); /* Zurücksetzen der Anhebung */
+}
+
+/* Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
